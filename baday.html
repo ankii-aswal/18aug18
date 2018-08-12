@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+if($("#ar2").html()==Click to view){
+	$("#ar2").html("Unclick");
+        $("#div1").fadeIn(3000);
+        $("#div2").fadeIn(6000);
+        $("#div3").fadeIn(10000);}
+else
+{
+$("#ar2").html("Click to view");
+ $("#div1").fadeOut(3000);
+        $("#div2").fadeOut(6000);
+        $("#div3").fadeOut(10000);
+}
+    });
+});
+
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown(3000);
+        $("#panel1").slideDown(6000);
+    });
+});
+</script>
+<style>
+div
+{
+border-style:outset;
+font-style:comicSansMs;
+}
+
+#ar1
+{
+	text-align:center;
+    text-transform:capitalize;
+    text-decoration:underline;
+    word-spacing:2px;
+}
+#flip
+{
+padding: 105px;
+    text-align: center;
+    background-color: #A9A9A9;
+    border-style: outset;
+    font-weight:bold;
+    font-size:50px;
+    border-radius:80px;
+}
+#panel,#panel1  {
+    padding: 105px;
+    border-radius:50px;
+    text-align: center;
+    background-color: #00CED1;
+    border-style: outset ;
+}
+
+#panel,#panel1 {
+    padding: 50px;
+    display: none;
+    }
+    
+    #ar2
+    {
+    float:center;
+    border-style:dashed;
+    background-color:#87CEEB;
+    }
+    div
+    {
+    border-radius:20px;
+    text-align:center;
+    padding:10px;
+    margin-top:40px;
+    }
+</style>
+</head>
+<body>
+
+<h1 id="ar1">hey there!</h1>
+ 
+<p id="flip">Click to slide down panel</p>
+<p id="panel">great</p>
+<p id="panel1">idea</p>
+
+<button id="ar2">Click to view</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;">hello </div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;">every</div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:yellow;">One</div>
+
+</body>
+</html>
+
