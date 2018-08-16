@@ -4,7 +4,30 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-	 
+	 $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+
+
+
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+
 	
 $(document).ready(function(){
     $("button").click(function(){
@@ -164,10 +187,37 @@ button{
 	text-align:center;
 		float:center;
 	}
+	#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
 		
 </style>
 </head>
 <body >
+	div id="slideshow">
+   <div>
+     <img src="r14.jpg">
+   </div>
+   <div>
+     <img src="r13.jpg">
+   </div>
+ 
+   
+</div>
+
 	
 	<h1 id="ar1">Hi Chidiya!!</h1>
 	<img src="r32.jpg" width="950" height="680"/><br/>
